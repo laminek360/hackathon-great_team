@@ -1,4 +1,129 @@
-h1{color:beige;font-size:50px;text-align:center ; font-family:Arial}
-body{background-color:saddlebrown}
-div{color:beige;font-size:25px;text-align:left ; font-family: }
 
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: saddlebrown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, saddlebrown 0%, #8B4513 100%);
+}
+
+/* Container for better layout */
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: beige;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+/* Fact display styling */
+#fact {
+    color: beige;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(245, 245, 220, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#fact:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Button styling */
+#newFactBtn {
+    background-color: beige;
+    color: saddlebrown;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+#newFactBtn:hover {
+    background-color: #f5f5dc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#newFactBtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#newFactBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    #fact {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+    
+    #newFactBtn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #fact {
+        font-size: 1.1rem;
+        padding: 1rem;
+        min-height: 100px;
+    }
+}
